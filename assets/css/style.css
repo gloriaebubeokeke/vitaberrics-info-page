@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../fonts/GlacialIndifference-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../fonts/GlacialIndifference-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Glacial Indifference";
+    src: url("../fonts/GlacialIndifference-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+/* CSS Variables - Vitaberrics Color Theme */
+        :root {
+            /* Brand Colors */
+  --primary-color: #ff8377;        /* Vitaberrics main brand color */
+  --primary-dark: #e66f63;         /* Darker shade for hover */
+  --primary-light: #ffb5ad;        /* Lighter shade for accents */
+
+  /* Secondary Colors (soft complementary) */
+  --secondary-color: #000000;      /* Soft teal for wellness contrast */
+  --secondary-light: #a5dada;
+
+  /* Dosage Unique Accent */
+--dosage-color: #4abfa3;
+
+  /* Neutral Colors */
+  --text-dark: #2c3e50;            /* Headings */
+  --text-light: #6c757d;           /* Paragraphs */
+  --bg-light: #fdfafb;             /* Very soft pink-white background */
+  --white: #ffffff;
+
+  /* Shadows */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.10);
+
+  /* Layout */
+  --radius: 12px;
+  --spacing: 1rem;
+            
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+            --spacing-xxl: 4rem;
+            
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        
+        body {
+            font-family: "Glacial Indifference", sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: var(--spacing-sm) var(--spacing-md);
+            box-shadow: var(--shadow);
+        }
+        
+        .header-logo{
+            display: flex;
+            gap: 5px;
+        }
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        #brand-logo{
+            border-radius: 15px;
+            margin-top: 3px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-md);
+        }
+        
+        /* Section Styles */
+        section {
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        section h2 {
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+            font-weight: 700;
+        }
+        
+        /* Card Design */
+        .card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-lg);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Benefits Grid - Flexbox */
+        .benefits-grid {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        
+        .benefit-item {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: var(--spacing-md);
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .benefit-item h3 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-xs);
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+        }
+        
+        .benefit-icon {
+            font-size: 1.5rem;
+        }
+        
+        .benefit-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Dosage Section */
+        .dosage-card {
+            background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+            border: 1.5px solid var(--secondary-light);
+        }
+        
+        .dosage-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            margin-top: var(--spacing-md);
+        }
+        
+        .dosage-group {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-sm);
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .dosage-group h4 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+            font-size: 1.1rem;
+        }
+        
+        .dosage-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+    color: var(--dosage-color);
+            margin: var(--spacing-xs) 0;
+        }
+        
+        .note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: var(--spacing-md);
+            border-radius: var(--radius-sm);
+            margin-top: var(--spacing-md);
+        }
+        
+        .note strong {
+            color: #856404;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-dark);
+            color: var(--white);
+            text-align: center;
+            padding: var(--spacing-lg) var(--spacing-md);
+            margin-top: var(--spacing-xxl);
+        }
+        
+        footer p {
+            opacity: 0.9;
+        }
+        
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .benefits-grid {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            
+            .benefit-item {
+                flex: 1 1 calc(50% - var(--spacing-md));
+            }
+            
+            .dosage-info {
+                flex-direction: row;
+            }
+            
+            .dosage-group {
+                flex: 1;
+            }
+        }
+        
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .hero {
+                padding: var(--spacing-xxl) var(--spacing-md);
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .container {
+                padding: var(--spacing-xl) var(--spacing-md);
+            }
+        }
