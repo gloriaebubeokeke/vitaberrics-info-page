@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Supplements | Vitaberrics Health</title>
     <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="css/supplements.css" />
+    <link rel="stylesheet" href="./css/supplements.css" />
   </head>
 
   <body>
@@ -14,8 +14,8 @@
         <img
           src="./assets/images/week1/logo-white.PNG"
           alt="brand-logo"
-          width="25px"
-          height="25px"
+          width="25"
+          height="25"
           id="brand-logo"
         />
         <span class="logo">Vitaberrics Health</span>
@@ -28,69 +28,28 @@
     </section>
 
     <div class="container">
+      <!-- 🔍 SEARCH BAR -->
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search supplements..."
+        class="search-bar"
+      />
+
+      <!-- 🏷 CATEGORY FILTER BUTTONS -->
+      <div class="filter-buttons">
+        <button data-category="all">All</button>
+        <button data-category="Immunity">Immunity</button>
+        <button data-category="Stress">Stress</button>
+        <button data-category="Energy">Energy</button>
+        <button data-category="Skin">Skin</button>
+      </div>
+
       <section>
         <h2>Our Top Supplements</h2>
 
-        <div class="supplement-grid">
-          <!-- CARD 1 - Vitamin C -->
-          <div class="supp-card">
-            <img src="./assets/images/week2/vitamin-c.png" alt="Vitamin C" />
-            <h3>Vitamin C</h3>
-            <div class="tag immunity">Immunity</div>
-            <p>Powerful antioxidant for immune support and skin health.</p>
-            <a href="./vitamin-c.html">Read more</a>
-          </div>
-
-          <!-- CARD 2 - Zinc -->
-          <div class="supp-card">
-            <img src="./assets/images/week2/zinc.png" alt="Zinc" />
-            <h3>Zinc</h3>
-            <div class="tag immunity">Immunity</div>
-            <p>Supports immunity, skin repair, and hormone balance.</p>
-            <a href="./zinc.html">Read more</a>
-          </div>
-
-          <!-- CARD 3 - Magnesium -->
-          <div class="supp-card">
-            <img src="./assets/images/week2/magnesium.png" alt="Magnesium" />
-            <h3>Magnesium</h3>
-            <div class="tag stress">Stress</div>
-            <p>Helps relaxation, mood enhancement, and muscle recovery.</p>
-            <a href="./magnesium.html">Read more</a>
-          </div>
-
-          <!-- CARD 4 - Omega-3 -->
-          <div class="supp-card">
-            <img src="./assets/images/week2/omega3.png" alt="Omega-3" />
-            <h3>Omega-3</h3>
-            <div class="tag energy">Energy</div>
-            <p>Supports heart, brain function, inflammation, and metabolism.</p>
-            <a href="./omega3.html">Read more</a>
-          </div>
-
-          <!-- CARD 5 - Ashwagandha -->
-          <div class="supp-card">
-            <img
-              src="./assets/images/week2/ashwagandha.png"
-              alt="Ashwagandha"
-            />
-            <h3>Ashwagandha</h3>
-            <div class="tag stress">Stress</div>
-            <p>
-              Adaptogenic herb for stress relief, hormones health, and energy.
-            </p>
-            <a href="./ashwagandha.html">Read more</a>
-          </div>
-
-          <!-- CARD 6 - Biotin -->
-          <div class="supp-card">
-            <img src="./assets/images/week2/biotin.png" alt="Biotin" />
-            <h3>Biotin</h3>
-            <div class="tag skin">Skin</div>
-            <p>Promotes healthy hair growth, glowing skin, and strong nails.</p>
-            <a href="./biotin.html">Read more</a>
-          </div>
-        </div>
+        <!-- 🔄 Where JS will load the cards -->
+        <div class="supplement-grid" id="supplementGrid"></div>
       </section>
     </div>
 
@@ -100,5 +59,7 @@
         <a href="./index.html" target="_blank">Return to Home</a>
       </p>
     </footer>
+
+    <script src="./js/supplements.js"></script>
   </body>
 </html>
