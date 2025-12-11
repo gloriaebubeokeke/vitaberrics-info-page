@@ -1,0 +1,135 @@
+/* Match global styling */
+body {
+  background: #fdfafb;
+  font-family: 'GlacialIndifference-Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* Hero Section (same style as supplements hero) */
+.symptom-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.symptom-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.symptom-hero p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Main Box (styled like your supplement cards) */
+.checker-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ff8377;
+  padding: 2rem;
+  border-radius: 18px;
+  border: 1px solid #e5e8eb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.checker-box h2 {
+  margin-bottom: 1rem;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+/* Checkbox list */
+.symptom-list {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.symptom-list label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fdfafb;
+  padding: 0.7rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #eaf0f6;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.symptom-list label:hover {
+  background: #4abfa3;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.25s ease;
+}
+
+/* Blue button (match your supplements link style) */
+#checkBtn {
+  background: #4abfa3;
+  color: white;
+}
+
+#checkBtn:hover {
+  background: #000000;
+}
+
+/* Grey Reset Button */
+#resetBtn {
+  background: #d6dbe3;
+  color: #333;
+}
+
+#resetBtn:hover {
+  background: #c7ccd4;
+}
+
+/* Result Card */
+.result-card {
+  margin-top: 2rem;
+  background: #f5f9ff;
+  border-left: 4px solid #000000;
+  padding: 1.5rem;
+  border-radius: 14px;
+  animation: slideIn 0.4s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.result-card h3 {
+  margin-top: 0;
+}
+
+.result-card a {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #4abfa3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

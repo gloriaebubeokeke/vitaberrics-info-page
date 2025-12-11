@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symptom Checker | Vitaberrics Health</title>
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/symptoms.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <img
+          src="./assets/images/week1/logo-white.PNG"
+          width="25"
+          height="25"
+          id="brand-logo"
+        />
+        <span class="logo">Vitaberrics Health</span>
+      </div>
+    </header>
+
+    <section class="symptom-hero">
+      <h1>Symptom Checker</h1>
+      <p>Select your symptoms to get a recommended supplement.</p>
+    </section>
+
+    <div class="checker-box">
+      <h2>Your Symptoms</h2>
+
+      <div class="symptom-list">
+        <label><input type="checkbox" value="stress" /> Stress</label>
+        <label
+          ><input type="checkbox" value="fatigue" /> Fatigue / Low Energy</label
+        >
+        <label
+          ><input type="checkbox" value="immunity" /> Frequent Colds / Weak
+          Immunity</label
+        >
+        <label
+          ><input type="checkbox" value="skin" /> Dull Skin / Breakouts</label
+        >
+        <label><input type="checkbox" value="sleep" /> Poor Sleep</label>
+        <label><input type="checkbox" value="muscles" /> Muscle Cramps</label>
+      </div>
+
+      <div class="btn-group">
+        <button id="checkBtn">Check Recommendation</button>
+        <button id="resetBtn" class="reset">Reset</button>
+      </div>
+
+      <div id="result" class="result-card hidden"></div>
+    </div>
+    <footer>
+      <p>© 2025 Vitaberrics Health — Wellness Through Knowledge 🌱</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem">
+        <a href="./index.html" target="_blank">Return to Home</a>
+      </p>
+    </footer>
+    <script src="./js/symptoms.js"></script>
+  </body>
+</html>
